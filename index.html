@@ -28,30 +28,45 @@ h2 {
     text-align: center;
 }
 
-/* Card Design */
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
 .card {
     background: white;
     border-radius: 12px;
     padding: 15px;
-    margin: 15px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-video {
-    width: 100%;
+/* 🔥 FIXED VIDEO BOX */
+.video-box {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
     border-radius: 10px;
+    background: black;
+}
+
+/* 🔥 FORCE VIDEO TO FILL BOX */
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop instead of stretch */
 }
 
 /* Steps */
 .steps {
     font-size: 14px;
     color: #374151;
+    text-align: left;
+    margin-top: 10px;
 }
 
 /* Meal */
@@ -78,54 +93,63 @@ video {
 <div class="grid">
 
 <div class="card">
-<video src="Videos/Running.mp4" controls></video>
-<h3>1. Running</h3> 
+<div class="video-box">
+<video src="Videos/Running.mp4" autoplay muted loop playsinline></video>
+</div>
+<h3>1. Running</h3>
 <div class="steps">
-• Start with light jogging for 5 mins (warm-up)<br>
-• Increase to a steady running pace for 20 mins<br>
-• Slow down to a light jog or walk for last 5 mins
+• Warm-up 5 mins<br>
+• Run 20 mins<br>
+• Cool down 5 mins
 </div>
 </div>
 
 <div class="card">
-<video src="Videos/Squat.mp4" controls></video>
+<div class="video-box">
+<video src="Videos/Squat.mp4" autoplay muted loop playsinline></video>
+</div>
 <h3>2. Squats</h3>
 <div class="steps">
-• Stand straight, feet shoulder-width<br>
-• Bend knees and go down<br>
+• Feet shoulder-width<br>
+• Bend knees<br>
 • Keep back straight<br>
-• Come up slowly (10 reps × 3)
+• 10 reps × 3
 </div>
 </div>
 
 <div class="card">
-<video src="Videos/Plank.mp4" controls></video>
+<div class="video-box">
+<video src="Videos/Plank.mp4" autoplay muted loop playsinline></video>
+</div>
 <h3>3. Plank</h3>
 <div class="steps">
-• Keep elbows under shoulders<br>
-• Body in straight line<br>
-• Hold 20–30 seconds<br>
-• Repeat 3 times
+• Straight body<br>
+• Hold 30 sec<br>
+• Repeat 3x
 </div>
 </div>
 
 <div class="card">
-<video src="Videos/Skipping.mp4" controls></video>
+<div class="video-box">
+<video src="Videos/Skipping.mp4" autoplay muted loop playsinline></video>
+</div>
 <h3>4. Skipping</h3>
 <div class="steps">
-• Start slow for 1 min<br>
-• Increase speed gradually<br>
-• Continue 5–10 mins
+• Start slow<br>
+• Increase speed<br>
+• 5–10 mins
 </div>
 </div>
 
 <div class="card">
-<video src="Videos/Cycling.mp4" controls></video>
+<div class="video-box">
+<video src="Videos/Cycling.mp4" autoplay muted loop playsinline></video>
+</div>
 <h3>5. Cycling</h3>
 <div class="steps">
-• Cycle at steady speed<br>
-• Maintain for 20 mins<br>
-• Keep posture straight
+• Steady pace<br>
+• 20 mins<br>
+• Maintain posture
 </div>
 </div>
 
@@ -134,15 +158,13 @@ video {
 <h2>🥗 7-Day Meal Plan</h2>
 
 <div class="card">
-
 <div class="meal"><b>Day 1:</b> Oats + Fruits + Almonds</div>
-<div class="meal"><b>Day 2:</b> Idli + Sambar + Coconut chutney</div>
-<div class="meal"><b>Day 3:</b> Brown rice + Vegetable curry</div>
-<div class="meal"><b>Day 4:</b> Salad + Paneer + Soup</div>
+<div class="meal"><b>Day 2:</b> Idli + Sambar</div>
+<div class="meal"><b>Day 3:</b> Brown rice + Veg curry</div>
+<div class="meal"><b>Day 4:</b> Salad + Paneer</div>
 <div class="meal"><b>Day 5:</b> Smoothie + Nuts</div>
-<div class="meal"><b>Day 6:</b> Chapati + Dal + Vegetables</div>
-<div class="meal"><b>Day 7:</b> Fruits + Detox soup (light food)</div>
-
+<div class="meal"><b>Day 6:</b> Chapati + Dal</div>
+<div class="meal"><b>Day 7:</b> Fruits + Soup</div>
 </div>
 
 </div>
