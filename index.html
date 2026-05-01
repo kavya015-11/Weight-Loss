@@ -44,7 +44,7 @@ h2 {
     text-align: center;
 }
 
-/* 🔥 FIXED VIDEO BOX */
+/* Fixed video box */
 .video-box {
     width: 250px;
     height: 250px;
@@ -54,11 +54,11 @@ h2 {
     background: black;
 }
 
-/* 🔥 FORCE VIDEO TO FILL BOX */
+/* Video fill */
 .video-box video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* crop instead of stretch */
+    object-fit: cover;
 }
 
 /* Steps */
@@ -92,65 +92,45 @@ h2 {
 
 <div class="grid">
 
+<!-- CARD -->
 <div class="card">
 <div class="video-box">
-<video src="Videos/Running.mp4" autoplay muted loop playsinline></video>
+<video class="vid" src="Videos/Running.mp4" autoplay muted loop playsinline></video>
 </div>
 <h3>1. Running</h3>
-<div class="steps">
-• Warm-up 5 mins<br>
-• Run 20 mins<br>
-• Cool down 5 mins
-</div>
+<div class="steps">• Warm-up 5 mins<br>• Run 20 mins<br>• Cool down 5 mins</div>
 </div>
 
 <div class="card">
 <div class="video-box">
-<video src="Videos/Squat.mp4" autoplay muted loop playsinline></video>
+<video class="vid" src="Videos/Squat.mp4" autoplay muted loop playsinline></video>
 </div>
 <h3>2. Squats</h3>
-<div class="steps">
-• Feet shoulder-width<br>
-• Bend knees<br>
-• Keep back straight<br>
-• 10 reps × 3
-</div>
+<div class="steps">• Feet shoulder-width<br>• Bend knees<br>• Keep back straight<br>• 10 reps × 3</div>
 </div>
 
 <div class="card">
 <div class="video-box">
-<video src="Videos/Plank.mp4" autoplay muted loop playsinline></video>
+<video class="vid" src="Videos/Plank.mp4" autoplay muted loop playsinline></video>
 </div>
 <h3>3. Plank</h3>
-<div class="steps">
-• Straight body<br>
-• Hold 30 sec<br>
-• Repeat 3x
-</div>
+<div class="steps">• Straight body<br>• Hold 30 sec<br>• Repeat 3x</div>
 </div>
 
 <div class="card">
 <div class="video-box">
-<video src="Videos/Skipping.mp4" autoplay muted loop playsinline></video>
+<video class="vid" src="Videos/Skipping.mp4" autoplay muted loop playsinline></video>
 </div>
 <h3>4. Skipping</h3>
-<div class="steps">
-• Start slow<br>
-• Increase speed<br>
-• 5–10 mins
-</div>
+<div class="steps">• Start slow<br>• Increase speed<br>• 5–10 mins</div>
 </div>
 
 <div class="card">
 <div class="video-box">
-<video src="Videos/Cycling.mp4" autoplay muted loop playsinline></video>
+<video class="vid" src="Videos/Cycling.mp4" autoplay muted loop playsinline></video>
 </div>
 <h3>5. Cycling</h3>
-<div class="steps">
-• Steady pace<br>
-• 20 mins<br>
-• Maintain posture
-</div>
+<div class="steps">• Steady pace<br>• 20 mins<br>• Maintain posture</div>
 </div>
 
 </div>
@@ -168,6 +148,21 @@ h2 {
 </div>
 
 </div>
+
+<script>
+// 🔥 Smart controls toggle
+const videos = document.querySelectorAll(".vid");
+
+videos.forEach(video => {
+    video.addEventListener("mouseenter", () => {
+        video.setAttribute("controls", "controls");
+    });
+
+    video.addEventListener("mouseleave", () => {
+        video.removeAttribute("controls");
+    });
+});
+</script>
 
 </body>
 </html>
